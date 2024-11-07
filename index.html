@@ -4,32 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto & Currency Monitor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Crypto & Currency Monitor</h1>
+    <div class="container mt-5">
+        <h1 class="text-center">Crypto & Currency Monitor</h1>
         
-        <div id="currency-section">
+        <div id="currency-section" class="mt-4">
             <h2>Currency Rates</h2>
-            <select id="currency-selector" onchange="fetchCurrencyRates()">
-                <!-- Options will be dynamically added -->
-            </select>
-            <div id="currency-rates">
-                <!-- Currency rates will display here -->
+            <div class="form-group">
+                <select id="currency-selector" class="form-control" onchange="fetchCurrencyRates()">
+                    <!-- Options will be dynamically added -->
+                </select>
             </div>
+            <table class="table table-striped table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Rate (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="currency-rates">
+                    <!-- Currency rates will display here -->
+                </tbody>
+            </table>
         </div>
 
-        <div id="crypto-section">
+        <div id="crypto-section" class="mt-5">
             <h2>Crypto Rates</h2>
-            <select id="crypto-selector" onchange="fetchCryptoRates()">
-                <!-- Options will be dynamically added -->
-            </select>
-            <div id="crypto-rates">
-                <!-- Crypto rates will display here -->
+            <div class="form-group">
+                <select id="crypto-selector" class="form-control" onchange="fetchCryptoRates()">
+                    <!-- Options will be dynamically added -->
+                </select>
             </div>
+            <table class="table table-striped table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Cryptocurrency</th>
+                        <th>Rate (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-rates">
+                    <!-- Crypto rates will display here -->
+                </tbody>
+            </table>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
